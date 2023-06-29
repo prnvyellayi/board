@@ -1,35 +1,11 @@
 import React, { Component } from "react";
 import "../css/login.css";
 import { Link } from "react-router-dom";
+import { useSession, signIn, signOut } from "next-auth/react"
+import LoginBox from "./loginBox";
+import AccountLogin from "./accountLogin";
 
 const Login = () => {
-  const AccountLogin = () => {};
-
-  const LoginBox = () => {
-    return (
-      <>
-        <div className="form">
-          <form style={{ margin: "20px" }}>
-            <div className="input-container">
-              <label className="label">Email address </label>
-              <input type="uname" name="uname" required />
-            </div>
-            <div className="input-container">
-              <label className="label">Password </label>
-              <input type="password" name="pass" required />
-            </div>
-            <div style={{ textAlign: "left", marginBottom: "20px" }}>
-              <Link className="link">Forgot password?</Link>
-            </div>
-            <div className="button-container">
-              <button className="signInButton">Sign In</button>
-            </div>
-          </form>
-        </div>
-      </>
-    );
-  };
-
   return (
     <>
       <div className="main">

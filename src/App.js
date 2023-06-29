@@ -7,12 +7,12 @@ import { Route, Routes } from "react-router-dom"
 function App() {
   return (
     <>
-      <div className="App d-flex">
-        <Routes>
-          <Route path="/" element={<Login />} exact />
-          <Route path="/home" element={<Homepage />} />
-        </Routes>
-      </div>
+        <div className="App d-flex">
+          <Routes>
+            <Route path="/" element={<Login />} exact />
+            <Route path="/home" element={<Homepage />} />
+          </Routes>
+        </div>
     </>
   );
 }

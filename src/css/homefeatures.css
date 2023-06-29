@@ -1,0 +1,22 @@
+.homefeat {
+    margin: 40px;
+    width: 100%;
+}
+
+.dashboard {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.search {
+    width: 180px;
+    border-radius: 10px;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.w50 {
+    width: 50%;
+}
