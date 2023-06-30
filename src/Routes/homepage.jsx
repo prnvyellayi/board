@@ -1,45 +1,39 @@
 import React, { Component } from "react";
-import "../css/homepage.css";
+import styles from "../css/homepage.module.css";
 import DashboardIcon from "../svg/dashboard_icon.js";
 import ScheduleIcon from "../svg/schedule_icon.js";
 import SettingsIcon from "../svg/setting_icon.js";
 import UserIcon from "../svg/user_icon.js";
 import TransactionIcon from "../svg/transaction_icon.js";
-import HomeFeatures from "./homeFeatures";
+import HomeFeatures from "../components/homeFeatures";
 
 const Homepage = () => {
   const Board = () => {
     return (
       <>
-        <div className="d-flex flex-column boardhome">
-          <div
-            className="d-flex flex-column"
-            style={{ height: "70%", width: "100%" }}
-          >
-            <span className="boardhead">Board.</span>
-            <span className="boardlist" style={{ fontWeight: "700" }}>
+        <div className={`d-flex flex-column ${styles.boardhome}`}>
+          <div className={`d-flex flex-column ${styles.w100} ${styles.h70}`}>
+            <span className={styles.boardhead}>Board.</span>
+            <span className={`${styles.boardlist} ${styles.fw700}`}>
               <DashboardIcon />
               Dashboard
             </span>
-            <span className="boardlist">
+            <span className={styles.boardlist}>
               <TransactionIcon /> Transactions
             </span>
-            <span className="boardlist">
+            <span className={styles.boardlist}>
               <ScheduleIcon /> Schedules
             </span>
-            <span className="boardlist">
+            <span className={styles.boardlist}>
               <UserIcon /> Users
             </span>
-            <span className="boardlist">
+            <span className={styles.boardlist}>
               <SettingsIcon /> Settings
             </span>
           </div>
-          <div
-            className="d-flex flex-column"
-            style={{ height: "30%", justifyContent: "flex-end" }}
-          >
-            <span className="boardbottom">Help</span>
-            <span className="boardbottom">Contact us</span>
+          <div className={`d-flex flex-column justify-content-end ${styles.h30}`}>
+            <span className={styles.boardbottom}>Help</span>
+            <span className={styles.boardbottom}>Contact us</span>
           </div>
         </div>
       </>
@@ -48,7 +42,7 @@ const Homepage = () => {
 
   return (
     <>
-      <div className="d-flex flex-row home">
+      <div className={`d-flex flex-row ${styles.home}`}>
         <Board />
         <HomeFeatures />
       </div>

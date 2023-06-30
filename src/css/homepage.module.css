@@ -40,3 +40,19 @@
     color: white;
     margin-bottom: 20px;
 }
+
+.w100 {
+    width: 100%;
+}
+
+.h70 {
+    height: 70%;
+}
+
+.fw700 {
+    font-weight: 700;
+}
+
+.h30 {
+    height: 30%;
+}
