@@ -146,6 +146,7 @@
   text-align: left;
   color: #858585;
   margin-top: 5px;
+  background-color: white;
 }
 
 .optionsPie {
@@ -155,6 +156,7 @@
   color: #858585;
   margin-top: 0px;
   margin-right: 20px;
+  background-color: white;
 }
 
 .schedule {
@@ -239,6 +241,11 @@
     padding-right: 20px;
     border: none;
     background-color: #F5F5F5;
+    /* width: 100%; */
+  }
+
+  .dashboard {
+    display: none;
   }
 }
 
@@ -247,16 +254,37 @@
     width: 50%;
     margin-top: 20px;
   }
+  
+  .loggedInImg {
+    display: none;
+  }
 
   .tilesStyle {
     flex-wrap: wrap;
   }
 
-  .dashboard {
-    display: none;
-  }
-
   .dropoptions {
     font-size: 15px;
+  }
+
+  .search {
+    width: 150px;
+  }
+
+  .dashboard2 {
+    font-size: 18px;
+  }
+
+  .schedule{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .piechartTitle {
+    text-align: center;
+  }
+
+  .scheduletext,.scheduletile1,.scheduletile2 {
+    margin-left: 20px;
   }
 }

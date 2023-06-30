@@ -97,7 +97,6 @@ const HomeFeatures = () => {
               height={30}
               width={30}
               className={styles.loggedInImg}
-              style={{ borderRadius: "50%" }}
             />
           </div>
           <div className={`d-flex ${styles.tilesStyle}`}>
@@ -305,7 +304,7 @@ const HomeFeatures = () => {
               </select>
             </div>
             <ResponsiveContainer width="100%" height={150}>
-              <PieChart margin={{ right: 80 }}>
+              <PieChart>
                 <Pie
                   data={data01[value]}
                   dataKey="value"
