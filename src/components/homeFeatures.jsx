@@ -6,6 +6,11 @@ import TotalTransactionsIcon from "../svg/total_transactions_icon.js";
 import LikesIcon from "../svg/likes_icon.js";
 import User2Icon from "../svg/user2_icon.js";
 import loginPic from "../svg/ID_icon.jpg";
+import DashboardIcon from "../svg/dashboard_icon.js";
+import ScheduleIcon from "../svg/schedule_icon.js";
+import SettingsIcon from "../svg/setting_icon.js";
+import UserIcon from "../svg/user_icon.js";
+import TransactionIcon from "../svg/transaction_icon.js";
 
 import {
   LineChart,
@@ -37,18 +42,51 @@ const HomeFeatures = () => {
   };
 
   const Dashboard = () => {
+    const [value, setValue] = React.useState(0);
+
+    const handleChange = (event) => {
+      setValue(event.target.value);
+    };
+
     return (
       <>
         <div className={`d-flex flex-column ${styles.w100}`}>
           <div className={`d-flex flex-row ${styles.w100}`}>
             <div className={`d-flex ${styles.w50} justify-content-start`}>
               <span className={styles.dashboard}>Dashboard</span>
+              <select
+                value={value}
+                onChange={handleChange}
+                className={styles.dashboard2}
+              >
+                <option className={styles.dropoptions} value={0}>
+                  Dashboard
+                </option>
+                <option className={styles.dropoptions} value={1}>
+                  Transactions
+                </option>
+                <option className={styles.dropoptions} value={2}>
+                  Schedules
+                </option>
+                <option className={styles.dropoptions} value={3}>
+                  Users
+                </option>
+                <option className={styles.dropoptions} value={4}>
+                  Settings
+                </option>
+                <option className={styles.dropoptions} value={5}>
+                  Help
+                </option>
+                <option className={styles.dropoptions} value={6}>
+                  Contact us
+                </option>
+              </select>
             </div>
             <div className={`d-flex ${styles.w50} justify-content-end`}>
               <input
                 type="search"
                 id="form1"
-                class="form-control search"
+                class={`form-control ${styles.search}`}
                 placeholder="Search..."
                 aria-label="Search"
               />
@@ -62,15 +100,21 @@ const HomeFeatures = () => {
               style={{ borderRadius: "50%" }}
             />
           </div>
-          <div className="d-flex flex-row">
+          <div className={`d-flex ${styles.tilesStyle}`}>
             {data.map((each) => (
               <div className={styles.tiles}>
                 <div className={each.css}>
-                  <span className={`${styles.w100} ${styles.iconspan}`}>{Icon(each.title)}</span>
-                  <span className={`${styles.w100} justify-content-left ${styles.span1}`}>
+                  <span className={`${styles.w100} ${styles.iconspan}`}>
+                    {Icon(each.title)}
+                  </span>
+                  <span
+                    className={`${styles.w100} justify-content-left ${styles.span1}`}
+                  >
                     {each.title}
                   </span>
-                  <span className={`${styles.w100} justify-content-left ${styles.span2}`}>
+                  <span
+                    className={`${styles.w100} justify-content-left ${styles.span2}`}
+                  >
                     {each.value}
                   </span>
                 </div>
@@ -143,7 +187,11 @@ const HomeFeatures = () => {
     ];
 
     const renderLineChart = (
-      <ResponsiveContainer width="96.5%" height={359} className={styles.chartbox}>
+      <ResponsiveContainer
+        width="96.5%"
+        height={359}
+        className={styles.chartbox}
+      >
         <LineChart margin={{ top: 20, right: 40, left: 20, bottom: 20 }}>
           <Text textAnchor={"title"} />
           <Line
@@ -177,7 +225,11 @@ const HomeFeatures = () => {
       <>
         <div className={`d-flex flex-column ${styles.abovechart}`}>
           <span className={styles.chartTitle}>Activites</span>
-          <select value={value} onChange={handleChange} className={styles.options}>
+          <select
+            value={value}
+            onChange={handleChange}
+            className={styles.options}
+          >
             <option value={0}>Apr-May 2021</option>
 
             <option value={1}>May-Jun 2021</option>
@@ -226,16 +278,20 @@ const HomeFeatures = () => {
         title: "Check Operation at Giga Factory 1",
         time: "18:00 - 20:00",
         location: "at Central Jakarta",
-        css: [styles.scheduletile2] ,
+        css: [styles.scheduletile2],
       },
     ];
 
     return (
       <>
-        <div className={`d-flex flex-row ${styles.w100}`} style={{ padding: "10px" }}>
-          <div className={`d-flex flex-column ${styles.w50} ${styles.schedule} ${styles.padding30}`}>
+        <div className={`d-flex ${styles.scheduleflex} ${styles.w100}`}>
+          <div
+            className={`d-flex flex-column ${styles.w50} ${styles.schedule} ${styles.padding30}`}
+          >
             <div className={`d-flex flex-row ${styles.abovepie}`}>
-              <span className={`${styles.w50} ${styles.piechartTitle}`}>Top Products</span>
+              <span className={`${styles.w50} ${styles.piechartTitle}`}>
+                Top Products
+              </span>
               <select
                 value={value}
                 onChange={handleChange}
@@ -269,8 +325,12 @@ const HomeFeatures = () => {
               </PieChart>
             </ResponsiveContainer>
           </div>
-          <div className={`d-flex flex-column ${styles.w50} ${styles.schedule} ${styles.padding30}`}>
-            <span className={`${styles.w100} ${styles.scheduletext}`}>Today's Schedule</span>
+          <div
+            className={`d-flex flex-column ${styles.w50} ${styles.schedule} ${styles.padding30}`}
+          >
+            <span className={`${styles.w100} ${styles.scheduletext}`}>
+              Today's Schedule
+            </span>
             {scheduleData.map((each) => (
               <div className={`${styles.w100} ${each.css} d-flex flex-column`}>
                 <span className={styles.schedtitle}>{each.title}</span>
@@ -286,7 +346,9 @@ const HomeFeatures = () => {
 
   return (
     <>
-      <div className={`d-flex flex-column align-items-center ${styles.homefeat}`}>
+      <div
+        className={`d-flex flex-column align-items-center ${styles.homefeat}`}
+      >
         <Dashboard />
         <Chart />
         <Schedule />

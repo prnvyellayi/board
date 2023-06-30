@@ -8,16 +8,15 @@ import { gapi } from "gapi-script";
 const clientId = "xyz";
 
 const Login = () => {
-
   useEffect(() => {
     function start() {
       gapi.client.init({
         clientId: clientId,
-        scope: ""
-      })
+        scope: "",
+      });
     }
-    gapi.load('client: auth2', start)
-  })
+    gapi.load("client: auth2", start);
+  });
 
   return (
     <>
@@ -27,16 +26,19 @@ const Login = () => {
         </div>
         <div className={`d-flex justify-content-center ${styles.div2}`}>
           <div className={styles.login}>
-            <span className={styles.signInSpan}>
-              Sign In
-            </span>
+            <span className={styles.signInSpan}>Sign In</span>
             <span className={styles.signInSpansmall}>
               Sign in to your account
             </span>
-            <AccountLogin />
-            <LoginBox />
+            <div className={styles.google}>
+              <AccountLogin />
+            </div>
+            <div className={styles.form}>
+              <LoginBox />
+            </div>
             <span className={styles.register}>
-              Don't have an account? <Link className={styles.link}>Register here</Link>
+              Don't have an account?{" "}
+              <Link className={styles.link}>Register here</Link>
             </span>
           </div>
         </div>

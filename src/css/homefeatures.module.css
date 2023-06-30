@@ -66,6 +66,10 @@
   border-radius: 20px;
 }
 
+.tilesStyle {
+  flex-direction: row;
+}
+
 .users {
   display: flex;
   flex-direction: column;
@@ -79,6 +83,7 @@
 .span1 {
   font-family: Lato;
   font-size: 14px;
+  text-align: left;
 }
 
 .span2 {
@@ -118,15 +123,20 @@
   text-align: left;
 }
 
+.scheduleflex {
+  flex-direction: row;
+  padding: 10px;
+}
+
 .chartTitle {
   font-size: 18px;
   font-weight: 700;
 }
 
 .piechartTitle {
-    font-size: 18px;
-    font-weight: 700;
-    text-align: left;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: left;
 }
 
 .options {
@@ -139,64 +149,114 @@
 }
 
 .optionsPie {
-    font-size: 12px;
-    border: none;
-    text-align: right;
-    color: #858585;
-    margin-top: 0px;
-    margin-right: 20px;
+  font-size: 12px;
+  border: none;
+  text-align: right;
+  color: #858585;
+  margin-top: 0px;
+  margin-right: 20px;
 }
 
 .schedule {
-    margin: 10px;
-    background-color: white;
-    border-radius: 20px;
-    height: 230px;
+  margin: 10px;
+  background-color: white;
+  border-radius: 20px;
+  height: 230px;
 }
 
 .abovePie {
-    width: 100%;
+  width: 100%;
 }
 
 .padding30 {
-    padding: 30px;
+  padding: 30px;
 }
 
 .scheduletext {
-    font-size: 18px;
-    font-weight: 700;
-    text-align: left;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: left;
 }
 
 .scheduletile1 {
-    margin-top: 10px;
-    font-family: Lato;
-    text-align: left;
-    border-left: 5px solid #9BDD7C; 
-    padding-left: 10px;
+  margin-top: 10px;
+  font-family: Lato;
+  text-align: left;
+  border-left: 5px solid #9bdd7c;
+  padding-left: 10px;
 }
 
 .scheduletile2 {
-    margin-top: 10px;
-    font-family: Lato;
-    text-align: left;
-    border-left: 5px solid #6972C3; 
-    padding-left: 10px;
+  margin-top: 10px;
+  font-family: Lato;
+  text-align: left;
+  border-left: 5px solid #6972c3;
+  padding-left: 10px;
 }
 
-.schedtitle{
-    font-size: 14px;
-    font-weight: 700;
-    color: #666666;
+.schedtitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #666666;
 }
 
 .schedtext {
-    font-size: 12px;
-    color: #999999;
+  font-size: 12px;
+  color: #999999;
 }
 
 .loggedInImg {
   border-radius: 50%;
   margin-top: 4px;
   margin-right: 20px;
+}
+
+.dashboard2{
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .schedule {
+    width: 100%;
+  }
+
+  .scheduleflex {
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 20px;
+  }
+
+  .tiles {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .dashboard2 {
+    display: list-item;
+    font-weight: 700;
+    font-size: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    background-color: #F5F5F5;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .tiles {
+    width: 50%;
+    margin-top: 20px;
+  }
+
+  .tilesStyle {
+    flex-wrap: wrap;
+  }
+
+  .dashboard {
+    display: none;
+  }
+
+  .dropoptions {
+    font-size: 15px;
+  }
 }

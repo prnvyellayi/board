@@ -10,6 +10,13 @@
   height: 100%;
 }
 
+.main {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
 .signInSpan {
   font-weight: 700;
   font-size: 36px;
@@ -28,19 +35,13 @@
   text-align: center;
   font-family: Lato;
   color: #858585;
+  order: 3
 }
 
 .boardtext {
   color: #ffffff;
   font-size: 72px;
   font-weight: 700;
-}
-
-.main {
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-  width: 100%;
 }
 
 .login {
@@ -81,6 +82,11 @@ input[type="password"] {
   border: 1px;
   margin-top: 30px;
   margin-bottom: 30px;
+  order: 2
+}
+
+.google {
+  order: 1
 }
 
 .signInButton {
@@ -123,4 +129,38 @@ input[type="password"] {
 .forgot {
   text-align: left; 
   margin-bottom: 20px;
+}
+
+
+
+@media screen and (max-width : 960px) {
+  .main {
+      flex-direction : column;
+  }
+
+  .board {
+    width: 100%;
+    height: 100px;
+  }
+
+  .div2 {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .boardtext {
+    font-size: 40px;
+  }
+
+  .form{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    order: 1
+  } 
+
+  .google {
+    order: 2;
+    margin-bottom: 20px;
+  }
+
 }

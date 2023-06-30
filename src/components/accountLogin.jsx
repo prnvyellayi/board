@@ -6,17 +6,15 @@ const clientId = "xyz";
 const AccountLogin = () => {
   return (
     <>
-      <div>
-        <GoogleOAuthProvider>
-          <GoogleLogin
-            shape={"pill"}
-            clientId={clientId}
-            buttonText="Sign in via Google"
-            cookiePolicy={"single_host_origin"}
-            isSignedIn={true}
-          />
-        </GoogleOAuthProvider>
-      </div>
+      <GoogleOAuthProvider>
+        <GoogleLogin
+          shape={"pill"}
+          clientId={clientId}
+          buttonText="Sign in via Google"
+          cookiePolicy={"single_host_origin"}
+          isSignedIn={true}
+        />
+      </GoogleOAuthProvider>
     </>
   );
 };
