@@ -6,11 +6,6 @@ import TotalTransactionsIcon from "../svg/total_transactions_icon.js";
 import LikesIcon from "../svg/likes_icon.js";
 import User2Icon from "../svg/user2_icon.js";
 import loginPic from "../svg/ID_icon.jpg";
-// import DashboardIcon from "../svg/dashboard_icon.js";
-// import ScheduleIcon from "../svg/schedule_icon.js";
-// import SettingsIcon from "../svg/setting_icon.js";
-// import UserIcon from "../svg/user_icon.js";
-// import TransactionIcon from "../svg/transaction_icon.js";
 
 import {
   LineChart,
@@ -223,7 +218,7 @@ const HomeFeatures = () => {
     return (
       <>
         <div className={`d-flex flex-column ${styles.abovechart}`}>
-          <span className={styles.chartTitle}>Activites</span>
+          <span className={styles.chartTitle}>Activities</span>
           <select
             value={value}
             onChange={handleChange}
