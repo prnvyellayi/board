@@ -309,8 +309,8 @@ const HomeFeatures = () => {
                   data={data01[value]}
                   dataKey="value"
                   nameKey="name"
-                  cx="60%"
-                  cy="60%"
+                  cx="45%"
+                  cy="50%"
                   outerRadius={60}
                   fill="#fff"
                 />

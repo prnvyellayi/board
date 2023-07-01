@@ -155,12 +155,17 @@ input[type="password"] {
   .form{
     margin-top: 10px;
     margin-bottom: 20px;
-    order: 1
+    order: 1;
+    width: 100%
   } 
 
   .google {
     order: 2;
     margin-bottom: 20px;
+  }
+
+  .login {
+    width: 95%;
   }
 
 }
