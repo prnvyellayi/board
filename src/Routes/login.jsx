@@ -37,8 +37,8 @@ const Login = () => {
               <LoginBox />
             </div>
             <span className={styles.register}>
-              Don't have an account?{" "}
-              <Link className={styles.link}>Register here</Link>
+              Don't have an account?
+              <Link to='/signUp' className={styles.link}>Register here</Link>
             </span>
           </div>
         </div>
