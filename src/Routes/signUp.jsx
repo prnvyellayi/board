@@ -11,7 +11,7 @@ const SignUp = () => {
         </div>
         <div className={`d-flex justify-content-center ${styles.div2}`}>
           <div className={styles.login}>
-            <span className={styles.signInSpan}>Sign Un</span>
+            <span className={styles.signInSpan}>Sign Up</span>
             <div className={styles.form}>
               <SignUpBox />
             </div>
